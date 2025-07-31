@@ -1,0 +1,20 @@
+--- configure.ac.orig	2022-04-28 08:12:41.251924489 +0200
++++ configure.ac	2022-04-28 08:13:32.064193673 +0200
+@@ -17,7 +17,7 @@
+ AC_USE_SYSTEM_EXTENSIONS([_GNU_SOURCE])
+ 
+ AM_GNU_GETTEXT([external])
+-AM_GNU_GETTEXT_VERSION([0.19.8])
++AM_GNU_GETTEXT_VERSION([0.19.7])
+ 
+ # options
+ AC_ARG_VAR(INTROSPECTION_SCANNER, introspection scanner)
+@@ -510,7 +510,7 @@
+       ])
+       
+ AS_IF([test "x$with_poppler" != xno],
+-      [PKG_CHECK_MODULES([POPPLER], [poppler-glib >= 0.71.0])
++      [PKG_CHECK_MODULES([POPPLER], [poppler-glib >= 0.62.0])
+        AC_SUBST(POPPLER_CFLAGS)
+        AC_SUBST(POPPLER_LIBS)
+        AC_DEFINE([AGS_WITH_POPPLER], [1],
