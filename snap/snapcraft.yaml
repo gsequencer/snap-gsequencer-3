@@ -5,7 +5,7 @@ description: |
   GSequencer is intended to be use for music composition. It features
   notation, automation and wave form editor. Supporting LADSPA, DSSI
   and LV2 plugins.
-icon: snap/ags.png
+icon: snap/local/ags.png
 
 base: core
 grade: stable # must be 'stable' to release into candidate/stable channels
