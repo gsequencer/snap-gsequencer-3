@@ -37,8 +37,7 @@ parts:
 
 apps:
   gsequencer:
-    command: usr/bin/gsequencer
-    extensions: [gnome-3-38]
+    command: desktop-launch $SNAP/usr/bin/gsequencer
     desktop: usr/share/applications/gsequencer.desktop
     environment:
       XDG_DATA_DIRS: $SNAP/usr/share:$XDG_DATA_DIRS
