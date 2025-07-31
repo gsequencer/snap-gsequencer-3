@@ -7,7 +7,7 @@ description: |
   and LV2 plugins.
 icon: snap/ags.png
 
-base: core18
+base: core
 grade: stable # must be 'stable' to release into candidate/stable channels
 confinement: strict
 #passthrough:
