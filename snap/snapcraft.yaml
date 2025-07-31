@@ -7,7 +7,6 @@ description: |
   and LV2 plugins.
 icon: snap/local/ags.png
 
-base: core
 grade: stable # must be 'stable' to release into candidate/stable channels
 confinement: strict
 #passthrough:
@@ -16,7 +15,7 @@ confinement: strict
 parts:
   gsequencer:
     after:
-     - desktop-gtk2
+     - desktop-gtk3
     source: http://download-mirror.savannah.gnu.org/releases/gsequencer/3.19.x/gsequencer-3.19.0.tar.gz # See 'snapcraft plugins'
     plugin: autotools
     build-packages: [wget,dblatex,gstreamer1.0-plugins-base,gstreamer1.0-plugins-good,gstreamer1.0-plugins-bad,libgstreamer1.0-dev,libgstreamer-plugins-base1.0-dev,libgtk-3-dev,libinstpatch-dev,libsndfile-dev,libsamplerate-dev,libsoup2.4-dev,libxml2-dev,libpoppler-glib-dev,gobject-introspection,libgmp-dev,ladspa-sdk,dssi-dev,lv2-dev,fftw3-dev,libasound2-dev,libjack-jackd2-dev,libpulse-dev,uuid-dev,libcunit1-dev,docbook-xsl,docbook-xml,gtk-doc-tools,xsltproc]
