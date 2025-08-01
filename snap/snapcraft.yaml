@@ -15,8 +15,6 @@ confinement: strict
 
 parts:
   gsequencer:
-    after:
-     - desktop-gtk3
     source: http://download-mirror.savannah.gnu.org/releases/gsequencer/3.19.x/gsequencer-3.19.0.tar.gz # See 'snapcraft plugins'
     plugin: autotools
     build-packages: [wget,dblatex,gstreamer1.0-plugins-base,gstreamer1.0-plugins-good,gstreamer1.0-plugins-bad,libgstreamer1.0-dev,libgstreamer-plugins-base1.0-dev,libgtk-3-dev,libinstpatch-dev,libsndfile-dev,libsamplerate-dev,libsoup2.4-dev,libxml2-dev,libpoppler-glib-dev,gobject-introspection,libgmp-dev,ladspa-sdk,dssi-dev,lv2-dev,fftw3-dev,libasound2-dev,libjack-jackd2-dev,libpulse-dev,uuid-dev,libcunit1-dev,docbook-xsl,docbook-xml,gtk-doc-tools,xsltproc]
@@ -39,7 +37,8 @@ parts:
 
 apps:
   gsequencer:
-    command: desktop-launch $SNAP/usr/bin/gsequencer
+    command: usr/bin/gsequencer
+    extensions: [gnome]
     desktop: usr/share/applications/gsequencer.desktop
     environment:
       XDG_DATA_DIRS: $SNAP/usr/share:$XDG_DATA_DIRS
